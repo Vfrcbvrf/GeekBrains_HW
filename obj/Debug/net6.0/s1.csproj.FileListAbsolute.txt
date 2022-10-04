@@ -1,0 +1,15 @@
+H:\Maksim\GB\s1\bin\Debug\net6.0\s1.exe
+H:\Maksim\GB\s1\bin\Debug\net6.0\s1.deps.json
+H:\Maksim\GB\s1\bin\Debug\net6.0\s1.runtimeconfig.json
+H:\Maksim\GB\s1\bin\Debug\net6.0\s1.dll
+H:\Maksim\GB\s1\bin\Debug\net6.0\s1.pdb
+H:\Maksim\GB\s1\obj\Debug\net6.0\s1.csproj.AssemblyReference.cache
+H:\Maksim\GB\s1\obj\Debug\net6.0\s1.GeneratedMSBuildEditorConfig.editorconfig
+H:\Maksim\GB\s1\obj\Debug\net6.0\s1.AssemblyInfoInputs.cache
+H:\Maksim\GB\s1\obj\Debug\net6.0\s1.AssemblyInfo.cs
+H:\Maksim\GB\s1\obj\Debug\net6.0\s1.csproj.CoreCompileInputs.cache
+H:\Maksim\GB\s1\obj\Debug\net6.0\s1.dll
+H:\Maksim\GB\s1\obj\Debug\net6.0\refint\s1.dll
+H:\Maksim\GB\s1\obj\Debug\net6.0\s1.pdb
+H:\Maksim\GB\s1\obj\Debug\net6.0\s1.genruntimeconfig.cache
+H:\Maksim\GB\s1\obj\Debug\net6.0\ref\s1.dll
