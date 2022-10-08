@@ -2,9 +2,19 @@
 
 //  задача 10
 
-// int a = int.Parse(Console.ReadLine()!);
-// Console.WriteLine((a/10)%10);
+int a = int.Parse(Console.ReadLine()!);
 
+int count = 0;
+int te = a;
+
+while (te>0){
+    count++;
+    te/=10;
+}
+
+if (count!=3){
+    Console.WriteLine("введите трехзначное число");
+} else Console.WriteLine((a/10)%10);
 
 
 
@@ -45,13 +55,13 @@
 
 
 
-int a = int.Parse(Console.ReadLine()!);
+// int a = int.Parse(Console.ReadLine()!);
 
-if (a<1 || a>7){
-    Console.WriteLine("введите число от 1 до 7");
-} else if (a>=1 && a<=5) {
-    Console.WriteLine("неть");
-} else Console.WriteLine("да");
+// if (a<1 || a>7){
+//     Console.WriteLine("введите число от 1 до 7");
+// } else if (a>=1 && a<=5) {
+//     Console.WriteLine("неть");
+// } else Console.WriteLine("да");
 
 
 
