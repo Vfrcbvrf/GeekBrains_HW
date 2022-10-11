@@ -1,67 +1,40 @@
 ﻿
 
-//  задача 10
+//  задача 19
 
-int a = int.Parse(Console.ReadLine()!);
+string a = Console.ReadLine()!;
+if (a.Length!=5) Console.WriteLine("введите 5-значное число");
+else {
 
-int count = 0;
-int te = a;
+    if (a[0]==a[4] && a[1]==a[3]) Console.WriteLine("да");
+    else Console.WriteLine("неа");
 
-while (te>0){
-    count++;
-    te/=10;
+
+
 }
 
-if (count!=3){
-    Console.WriteLine("введите трехзначное число");
-} else Console.WriteLine((a/10)%10);
+
+
+
+
+
+/////////////////////////////////////////////////////////////
+
+
+// задача 21
+
+
+
 
 
 
 /////////////////////////////////////////////////////////////
 
 
-// задача 13
+// задача 23
 
 
 
-// int a = int.Parse(Console.ReadLine()!);
-// int count = 0;
-// int te = a;
-
-// while (te>0){
-//     count++;
-//     te/=10;
-// }
-
-
-// if (count<3){
-//     Console.WriteLine("третьей цифры нема");
-// }else {
-
-//     for (int i=1; i<=count-3; i++){
-//         a/=10;
-//     }
-
-//     Console.WriteLine(a%10);
-
-// }
-
-
-/////////////////////////////////////////////////////////////
-
-
-// задача 15
-
-
-
-// int a = int.Parse(Console.ReadLine()!);
-
-// if (a<1 || a>7){
-//     Console.WriteLine("введите число от 1 до 7");
-// } else if (a>=1 && a<=5) {
-//     Console.WriteLine("неть");
-// } else Console.WriteLine("да");
 
 
 
