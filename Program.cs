@@ -1,6 +1,4 @@
-﻿
-
-//  задача 19
+﻿//  задача 25
 
 // string a = Console.ReadLine()!;
 // if (a.Length!=5) Console.WriteLine("введите 5-значное число");
@@ -13,52 +11,37 @@
 
 // }
 
+int[] st(int x, int y){
+
+    for (int i=1; i<=y; i++){
+
+        x*=x;
+    }
+    return x;
 
 
-
-
-
-/////////////////////////////////////////////////////////////
-
-
-// задача 21
-
-
-// Console.WriteLine("введите координаты точки A: ");
-// int a1 = int.Parse(Console.ReadLine()!);
-// int a2 = int.Parse(Console.ReadLine()!);
-// int a3 = int.Parse(Console.ReadLine()!);
-// Console.WriteLine("введите координаты точки B: ");
-// int b1 = int.Parse(Console.ReadLine()!);
-// int b2 = int.Parse(Console.ReadLine()!);
-// int b3 = int.Parse(Console.ReadLine()!);
-
-// double ans = Math.Sqrt( Math.Pow((a1-b1),2) + Math.Pow((a2-b2),2) + Math.Pow((a3-b3),2)   );
-
-
-// Console.WriteLine(Math.Round(ans,2));
-
-
-
-
-
-
-
-
-/////////////////////////////////////////////////////////////
-
-
-// задача 23
-
-Console.WriteLine("введите число ");
-int a = int.Parse(Console.ReadLine()!);
-
-
-for (int i=1; i<=a; i++){
-
-    Console.WriteLine(i + " " + Math.Pow(i,3) );
-    
 }
+
+
+int a = int.Parse(Console.ReadLine()!);
+int b = int.Parse(Console.ReadLine()!);
+Console.WriteLine(st(a, b));
+
+
+
+/////////////////////////////////////////////////////////////
+
+// задача 27
+
+
+
+
+
+/////////////////////////////////////////////////////////////
+
+// задача 29
+
+
 
 
 
