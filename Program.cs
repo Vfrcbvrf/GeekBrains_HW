@@ -31,25 +31,25 @@
 // задача 27
 
 
-int numb(int x){
+// int numb(int x){
 
-    int sum = 0;
-    while (x>0){
+//     int sum = 0;
+//     while (x>0){
 
-        sum+= x%10;
-        x/=10;
-
-
-
-    }
-    return sum;
+//         sum+= x%10;
+//         x/=10;
 
 
-}
+
+//     }
+//     return sum;
 
 
-int a = int.Parse(Console.ReadLine()!);
-Console.WriteLine(numb(a));
+// }
+
+
+// int a = int.Parse(Console.ReadLine()!);
+// Console.WriteLine(numb(a));
 
 
 
@@ -57,6 +57,27 @@ Console.WriteLine(numb(a));
 /////////////////////////////////////////////////////////////
 
 // задача 29
+
+
+
+int[] arr(int x){
+
+    int[] ex = new int[x];
+
+    for (int i=0; i<x; i++){
+
+        ex[i] = new Random().Next(1000);
+
+    }
+
+    return ex;
+
+
+}
+
+int[] a = arr(8);
+
+Console.WriteLine($"[{String.Join(", ", a) }]");
 
 
 
