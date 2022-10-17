@@ -1,5 +1,6 @@
 ﻿//  задача 34
 
+/*
 
 int[] addarr(int x){
 
@@ -46,7 +47,7 @@ Console.WriteLine($"[{String.Join(", ", b)}]");
 Console.WriteLine(size(b) + " четный(ых) элемент(а)");
 
 
-
+*/
 
 
 
@@ -55,6 +56,58 @@ Console.WriteLine(size(b) + " четный(ых) элемент(а)");
 /////////////////////////////////////////////////////////////
 
 // задача 36
+
+
+/*
+
+int[] zapar(int x){
+
+    int[] arr = new int[x];
+
+    for (int i=0; i<x; i++){
+
+        arr[i] = new Random().Next(-100, 100);
+
+
+    }
+
+    return arr;
+
+}
+
+
+int nech(int[] pit){
+
+    int sum = 0;
+
+    for (int i=1; i<pit.Length; i+=2){
+
+
+        sum+=pit[i];
+
+    }
+
+    return sum;
+
+
+
+
+}
+
+
+Console.WriteLine("Введите размер массива: ");
+
+int a = int.Parse(Console.ReadLine()!);
+
+int[] bar = zapar(a);
+
+Console.WriteLine($"[{String.Join(", ", bar)}]");
+
+Console.WriteLine(nech(bar));
+
+*/
+
+
 
 
 
@@ -66,24 +119,46 @@ Console.WriteLine(size(b) + " четный(ых) элемент(а)");
 
 
 
-// int[] arr(int x){
+int[] arr(int x){
 
-//     int[] ex = new int[x];
-
-//     for (int i=0; i<x; i++){
-
-//         ex[i] = new Random().Next(1000);
-
-//     }
-
-//     return ex;
+    int[] put = new int[x];
 
 
-// }
+    for (int i=0; i<x; i++){
 
-// int[] a = arr(8);
+        
+        put[i] = new Random().Next(-1000000, 1000000);
 
-// Console.WriteLine($"[{String.Join(", ", a) }]");
+    }
+
+    return put;
+
+}
+
+
+int max = -1000000000;
+int min =  1000000000;
+
+Console.WriteLine("Введите длину массива ");
+int a = int.Parse(Console.ReadLine()!);
+int[] be = arr(a);
+
+Console.WriteLine($"[{String.Join(", ", be)}]");
+
+
+
+for (int i=0; i<a; i++){
+
+    if (be[i] > max) max = be[i];
+    if (be[i] < min) min = be[i];
+
+}
+
+Console.WriteLine(max - min);
+
+
+
+
 
 
 
