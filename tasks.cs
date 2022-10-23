@@ -1,160 +1,136 @@
-﻿//  задача 34
+﻿//  задача 41
 
 /*
 
-int[] addarr(int x){
+float[] zap(int x){
 
-    int[] ar = new int[x];
-
-    for (int i=0; i<x; i++){
-
-        ar[i] = new Random().Next(100, 999);
-
-
-    }
-
-    return ar;
-
-}
-
-int size(int[] t){
-
-    int count = 0;
-
-    for (int i=0; i<t.Length; i++){
-
-        if (t[i] % 2 == 0) count++;
-
-    
-
-    }
-
-    return count;
-
-
-
-
-}
-
-Console.WriteLine("Введите размер массива");
-int a = int.Parse(Console.ReadLine()!);
-
-
-int[] b = addarr(a);
-
-Console.WriteLine($"[{String.Join(", ", b)}]");
-
-Console.WriteLine(size(b) + " четный(ых) элемент(а)");
-
-
-*/
-
-
-
-
-
-/////////////////////////////////////////////////////////////
-
-// задача 36
-
-
-/*
-
-int[] zapar(int x){
-
-    int[] arr = new int[x];
-
-    for (int i=0; i<x; i++){
-
-        arr[i] = new Random().Next(-100, 100);
-
-
-    }
-
-    return arr;
-
-}
-
-
-int nech(int[] pit){
-
-    int sum = 0;
-
-    for (int i=1; i<pit.Length; i+=2){
-
-
-        sum+=pit[i];
-
-    }
-
-    return sum;
-
-
-
-
-}
-
-
-Console.WriteLine("Введите размер массива: ");
-
-int a = int.Parse(Console.ReadLine()!);
-
-int[] bar = zapar(a);
-
-Console.WriteLine($"[{String.Join(", ", bar)}]");
-
-Console.WriteLine(nech(bar));
-
-*/
-
-
-
-
-
-
-
-/////////////////////////////////////////////////////////////
-
-// задача 38
-
-
-
-int[] arr(int x){
-
-    int[] put = new int[x];
+    float[] at = new float[x];
 
 
     for (int i=0; i<x; i++){
 
         
-        put[i] = new Random().Next(-1000000, 1000000);
+        at[i] = float.Parse(Console.ReadLine()!);
+
 
     }
 
-    return put;
+    return at;
+
 
 }
 
 
-int max = -1000000000;
-int min =  1000000000;
 
-Console.WriteLine("Введите длину массива ");
+int getzero(float[] po){
+
+    int sum = 0;
+
+    for (int j=0; j<po.Length; j++){
+
+        if (po[j] > 0) sum++;
+
+    }
+
+    return sum;
+
+}
+
+
+Console.WriteLine("Количество чисел: ");
 int a = int.Parse(Console.ReadLine()!);
-int[] be = arr(a);
-
-Console.WriteLine($"[{String.Join(", ", be)}]");
 
 
+Console.WriteLine("Введите " + a + " чисел");
 
-for (int i=0; i<a; i++){
+float[] apr = zap(a);
 
-    if (be[i] > max) max = be[i];
-    if (be[i] < min) min = be[i];
+Console.WriteLine($"[{String.Join("; ", apr)}]");
+
+Console.WriteLine("Здесь " + getzero(apr) + " чисел, больших 0");
+
+*/
+
+
+/////////////////////////////////////////////////////////////
+
+// задача 43
+
+/*
+Console.WriteLine("k1= ");
+float k1 = float.Parse(Console.ReadLine()!);
+
+Console.WriteLine("b1= ");
+float b1 = float.Parse(Console.ReadLine()!);
+
+Console.WriteLine("k2= ");
+float k2 = float.Parse(Console.ReadLine()!);
+
+Console.WriteLine("b2= ");
+float b2 = float.Parse(Console.ReadLine()!);
+
+
+float x = (b2-b1)/(k1-k2);
+float y = k1*x + b1;
+
+Console.WriteLine($"({String.Join("; ", x, y)})");
+
+*/
+
+/////////////////////////////////////////////////////////////
+
+// задача доп
+
+
+float[] getarr(){
+
+
+    float[] exarr = new float[10];
+
+    for (int i=0; i<10; i++){
+
+        exarr[i] = new Random().Next(50, 100);
+
+    }
+
+    return exarr;
 
 }
 
-Console.WriteLine(max - min);
+
+float schet(ref float a, ref float[] arr ){
+
+
+    float con=1;
+
+
+    for (int j=0; j<arr.Length; j++){
+
+        if(arr[j]<a) con*=arr[j];
+
+
+    }
+
+    return con;
+
+
+
+}
+
+
+
+float[] arr = getarr();
+
+Console.WriteLine("Введите число: ");
+float a = float.Parse(Console.ReadLine()!);
+
+Console.WriteLine($"[{String.Join(", ", arr)}]");
+
+float test = schet(ref a, ref arr);
+
+if (test==1) Console.WriteLine("Чисел, которые меньше " + a + ", нет");
+    else Console.WriteLine(test);
+
 
 
 
