@@ -1,138 +1,164 @@
-﻿//  задача 41
+﻿//  задача 47
 
 /*
 
-float[] zap(int x){
 
-    float[] at = new float[x];
+float[,] get(float[,] x){
 
-
-    for (int i=0; i<x; i++){
-
-        
-        at[i] = float.Parse(Console.ReadLine()!);
+    for (int i = 0; i<x.GetLength(0); i++){
+        for (int j=0; j<x.GetLength(1); j++){
+            
+            float b = new Random().Next(-100, 100);
+            x[i,j] = b/10;
+        }
 
 
     }
 
-    return at;
-
-
+    return x;
 }
 
+void print(float[,] ara){
 
+    for (int i=0; i<ara.GetLength(0); i++){
+        for (int j=0; j<ara.GetLength(1); j++){
 
-int getzero(float[] po){
+            Console.Write(ara[i,j] + "  ");
 
-    int sum = 0;
-
-    for (int j=0; j<po.Length; j++){
-
-        if (po[j] > 0) sum++;
-
+        }
+        Console.WriteLine();
     }
 
-    return sum;
 
 }
 
+Console.WriteLine("m= ");
+int m = int.Parse(Console.ReadLine()!);
+Console.WriteLine("n= ");
+int n = int.Parse(Console.ReadLine()!);
 
-Console.WriteLine("Количество чисел: ");
-int a = int.Parse(Console.ReadLine()!);
+float[,] a = new float[m,n];
 
-
-Console.WriteLine("Введите " + a + " чисел");
-
-float[] apr = zap(a);
-
-Console.WriteLine($"[{String.Join("; ", apr)}]");
-
-Console.WriteLine("Здесь " + getzero(apr) + " чисел, больших 0");
+print(get(a));
 
 */
 
 
 /////////////////////////////////////////////////////////////
 
-// задача 43
+// задача 50
+
 
 /*
-Console.WriteLine("k1= ");
-float k1 = float.Parse(Console.ReadLine()!);
-
-Console.WriteLine("b1= ");
-float b1 = float.Parse(Console.ReadLine()!);
-
-Console.WriteLine("k2= ");
-float k2 = float.Parse(Console.ReadLine()!);
-
-Console.WriteLine("b2= ");
-float b2 = float.Parse(Console.ReadLine()!);
 
 
-float x = (b2-b1)/(k1-k2);
-float y = k1*x + b1;
+float[,] get(float[,] x){
 
-Console.WriteLine($"({String.Join("; ", x, y)})");
+    for (int i = 0; i<x.GetLength(0); i++){
+        for (int j=0; j<x.GetLength(1); j++){
+            
+            x[i,j] = new Random().Next(-10, 10);
+        }
+
+
+    }
+
+    return x;
+}
+
+void print(float[,] ara){
+
+    for (int i=0; i<ara.GetLength(0); i++){
+        for (int j=0; j<ara.GetLength(1); j++){
+
+            Console.Write(ara[i,j] + "  ");
+
+        }
+        Console.WriteLine();
+    }
+
+
+}
+
+Console.Write("m= ");
+int m = int.Parse(Console.ReadLine()!);
+Console.Write("n= ");
+int n = int.Parse(Console.ReadLine()!);
+
+float[,] a = new float[m,n];
+
+print(get(a));
+
+
+Console.Write("i= ");
+int fir = int.Parse(Console.ReadLine()!);
+Console.Write("j= ");
+int sec = int.Parse(Console.ReadLine()!);
+if (fir>m-1 || sec>n-1) Console.WriteLine("Dont exist");
+    else Console.WriteLine(a[fir, sec]);
+
 
 */
 
+
+
 /////////////////////////////////////////////////////////////
 
-// задача доп
+// задача 52
 
 
-float[] getarr(){
+int[,] get(int[,] x){
 
+    for (int i = 0; i<x.GetLength(0); i++){
+        for (int j=0; j<x.GetLength(1); j++){
+            
+            x[i,j] = new Random().Next(10);
+        }
 
-    float[] exarr = new float[10];
-
-    for (int i=0; i<10; i++){
-
-        exarr[i] = new Random().Next(50, 100);
 
     }
 
-    return exarr;
-
+    return x;
 }
 
+void print(int[,] ara){
 
-float schet(ref float a, ref float[] arr ){
+    for (int i=0; i<ara.GetLength(0); i++){
+        for (int j=0; j<ara.GetLength(1); j++){
 
+            Console.Write(ara[i,j] + "  ");
 
-    float con=1;
-
-
-    for (int j=0; j<arr.Length; j++){
-
-        if(arr[j]<a) con*=arr[j];
-
-
+        }
+        Console.WriteLine();
     }
-
-    return con;
-
 
 
 }
 
 
+int[,] a = new int[4,4];
 
-float[] arr = getarr();
-
-Console.WriteLine("Введите число: ");
-float a = float.Parse(Console.ReadLine()!);
-
-Console.WriteLine($"[{String.Join(", ", arr)}]");
-
-float test = schet(ref a, ref arr);
-
-if (test==1) Console.WriteLine("Чисел, которые меньше " + a + ", нет");
-    else Console.WriteLine(test);
+print(get(a));
 
 
+float ber = 0, count = 0;;
 
+for (int i=0; i<a.GetLength(0); i++){
+
+    ber = 0; count = 0;
+
+    for (int j=0; j<a.GetLength(1); j++){
+
+        ber += a[j, i];
+        count++;
+
+    }
+    Console.Write(ber/count + " ");
+
+
+
+    
+}
 
 
 
