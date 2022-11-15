@@ -119,7 +119,7 @@ print(n);
 
 // задача 56
 
-
+/*
 
 
 int[,] getar(int[,] x){
@@ -193,6 +193,142 @@ Console.WriteLine();
 sort(ar);
 print(ar);
 
+*/
+
+
+
+// задача 56
+
+
+/*
+
+
+
+int[,] getar(int[,] x){
+
+    for (int i=0; i<x.GetLength(0); i++){
+        for (int j=0; j<x.GetLength(1); j++){
+
+            x[i,j] = new Random().Next(1, 10);
+
+
+        }
+    }
+
+    return x;
+
+}
+
+void print(int[,] h){
+
+
+    for (int i=0; i<h.GetLength(0); i++){
+        for (int j=0; j<h.GetLength(1); j++){
+
+            Console.Write(h[i,j] + " ");
+        }
+        Console.WriteLine();
+    }
+}
+
+void minimum(int[,] fr)
+{
+    int min = 0;
+    int stroka = 0;
+    int sum = 0;
+    for (int i = 0; i < fr.GetLength(1); i++){
+        min += fr[0, i];
+    }
+    for (int i = 0; i < fr.GetLength(0); i++){
+        for (int j = 0; j < fr.GetLength(1); j++) sum += fr[i, j];{
+            if (sum < min){
+                min = sum;
+                stroka = i;
+            }
+        }
+        sum = 0;
+    }
+    Console.Write($"{stroka + 1} строка");
+}
+
+
+int[,] n = new int[4,4];
+getar(n);
+print(n);
+minimum(n);
+
+
+*/
+
+// задача 58
+
+
+
+
+
+void getar(int[,] x){
+
+    for (int i = 0; i < x.GetLength(0); i++){
+
+        for (int j = 0; j < x.GetLength(1); j++){
+
+            x[i, j] = new Random().Next(1, 10);
+
+        }
+    }
+}
+
+
+void print(int[,] x){
+
+    for (int i = 0; i < x.GetLength(0); i++){
+        for (int j = 0; j < x.GetLength(1); j++){
+
+            Console.Write($"{x[i, j]} ");
+        }
+        Console.WriteLine();
+    }
+}
+
+
+Console.Write("Количсетво строк= ");
+int str = int.Parse(Console.ReadLine()!);
+Console.Write("Количество столбцов= ");
+int stb = int.Parse(Console.ReadLine()!);
+
+int[,] arr = new int[str, stb];
+int[,] help = new int[str, stb];
+int[,] result = new int[str, stb];
+
+getar(arr);
+print(arr);
+
+Console.WriteLine();
+
+getar(help);
+print(help);
+
+Console.WriteLine();
+
+if (arr.GetLength(0) != help.GetLength(1)){
+
+    Console.WriteLine("Нельзя перемножить!");
+    return;
+}
+
+for (int i = 0; i < arr.GetLength(0); i++){
+
+    for (int j = 0; j < help.GetLength(1); j++){
+
+        result[i, j] = 0;
+        for (int k = 0; k < arr.GetLength(1); k++){
+
+            result[i, j] += arr[i, k] * help[k, j];
+        }
+    }
+}
+
+print(result);
 
 
 
