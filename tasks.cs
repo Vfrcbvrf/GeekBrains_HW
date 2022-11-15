@@ -61,7 +61,7 @@ print(n);
 
 
 
-
+/*
 
 int[,] getar(int[,] x){
 
@@ -111,9 +111,87 @@ getar(n);
 
 print(n);
 
-
+*/
 
 /////////////////////////////////////////////////////////////
+
+
+
+// задача 56
+
+
+
+
+int[,] getar(int[,] x){
+
+    
+    for (int i=0; i < x.GetLength(0); i++){
+        for (int j=0; j<x.GetLength(1); j++){
+
+            x[i,j] = new Random().Next(1, 9);
+
+        }
+    }
+
+
+
+
+    return x;
+}
+
+void print(int[,] x){
+
+    for (int i=0; i< x.GetLength(0); i++){
+        for (int j=0; j< x.GetLength(1); j++){
+
+            Console.Write(x[i,j] + " ");
+        }
+        Console.WriteLine();
+    }
+
+
+
+}
+
+
+void sort(int[,] m ){
+
+    for (int i=0; i< m.GetLength(0); i++){
+        for (int j=0; j < m.GetLength(1); j++){
+
+            for (int l=0; l < m.GetLength(1) -1; l++){
+
+                if (m[i,l] < m[i, l+1]){
+
+                    int help = m[i,l+1];
+                    m[i,l+1] = m[i,l];
+                    m[i,l] = help;
+
+
+                }
+
+            }
+
+
+
+        }
+    }
+
+
+
+}
+
+
+
+int[,] ar = new int[4,3];
+
+getar(ar);
+print(ar);
+
+Console.WriteLine();
+
+sort(ar);
+print(ar);
 
 
 
